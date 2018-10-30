@@ -8,17 +8,17 @@ Because of this I went for such an easy to use high level language like C# and h
 
 The main resource I'm using while developing this is the book *Game Coding Complete, Fourth Edition*.
 
-# Usage:
+## Usage:
 Dependencies:
 - Json.NET (Newtonsoft.Json NuGet package) -> This package is used for parsing JSONs
 - System.Windows.Forms -> This is used mostly for message pump
 
 The project is developed with Visual Studio 2017 but I think the older versions should be compatabile, too.
 
-Just Open the project with your version of VS and all the dependencies should be loaded automatically.
+Just open the project with your version of VS and all the dependencies should be loaded automatically.
 
-# TODO
+## TODO
 - Implement simple physics system for collisions detection
 - Implement hook for the windows message pump to process input -> upgrading the InputManger
 - Shut down phase of the game engine
-- Deeper description of the project
+- Documentation of the project
