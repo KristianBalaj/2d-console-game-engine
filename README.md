@@ -22,3 +22,4 @@ Just open the project with your version of VS and all the dependencies should be
 - Implement hook for the windows message pump to process input -> upgrading the InputManger
 - Shut down phase of the game engine
 - Documentation of the project
+- Implement TimeManager -> static, containing elapsed game time, delta time
