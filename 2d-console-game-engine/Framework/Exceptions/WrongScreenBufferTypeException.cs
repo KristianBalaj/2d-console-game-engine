@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2d_console_game_engine
+namespace ConsoleApp1
 {
-    class Program
+    public class WrongScreenBufferTypeException : Exception
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
