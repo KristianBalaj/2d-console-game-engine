@@ -8,14 +8,14 @@ namespace GameEngine
 {
     public class ActorsFactory
     {
-        public Actor CreatePlayer()
+        public Actor CreatePlayer(Vector2Int position)
         {
             ActorManager.LastActorUniqueID++;
-            Actor newAct = new Actor(Vector2Int.Zero, ActorManager.LastActorUniqueID, "Player");
+            Actor newAct = new Actor(position, ActorManager.LastActorUniqueID, "Player");
             var renderComponent = newAct.AddComponent<ConsoleRenderComponent>();
             newAct.AddComponent<MovementComponent>();
 
-            renderComponent.ChangeRendering(new Vector2Int(2, 2), 0, '█');
+            renderComponent.ChangeRendering(new Vector2Int(2, 2), 0, '*');
 
             return newAct;
         }

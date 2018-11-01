@@ -8,8 +8,10 @@ namespace GameEngine
 {
     public abstract class Renderer
     {
-        protected readonly int SCREEN_WIDTH;
-        protected readonly int SCREEN_HEIGHT;
+        public readonly int SCREEN_WIDTH;
+        public readonly int SCREEN_HEIGHT;
+
+        public Vector2Int GetRendererSize { get { return new Vector2Int(SCREEN_WIDTH, SCREEN_HEIGHT); } }
 
         public Renderer(int screenWidth, int screenHeight)
         {
