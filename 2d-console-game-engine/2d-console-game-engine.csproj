@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B1D3BB78-C162-4A24-8980-6ACE301F4F63}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2d_console_game_engine</RootNamespace>
+    <RootNamespace>GameEngine</RootNamespace>
     <AssemblyName>2d-console-game-engine</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -72,6 +72,7 @@
     <Compile Include="Framework\Rendering\ScreenBuffer.cs" />
     <Compile Include="Framework\Serialization\Exceptions\InputJsonParsingException.cs" />
     <Compile Include="Framework\Serialization\InputModel.cs" />
+    <Compile Include="MyScripts\ActorsFactory.cs" />
     <Compile Include="MyScripts\MovementComponent.cs" />
     <Compile Include="MyScripts\MyGame.cs" />
     <Compile Include="MyScripts\MyGameLogic.cs" />

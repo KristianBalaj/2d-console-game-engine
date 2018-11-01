@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Debug = System.Diagnostics.Debug;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class RunningGameState : GameStateBase
     {

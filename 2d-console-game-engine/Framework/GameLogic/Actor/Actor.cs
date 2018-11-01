@@ -3,26 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     /// <summary>
     /// Anything in the game is an actor - a player, enemy, pick-up, bullet, etc.
     /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
     public class Actor
     {
+        [JsonProperty]
         public readonly int UNIQUE_ID;
 
+        [JsonProperty]
         public string Name;
 
+        [JsonProperty]
         private bool isDestroyed;
 
         private List<Component> newAddedComponents;
+
         private Dictionary<Type, Component> components; // maps component type to component object
 
         /// <summary>
         /// World position of the actor.
         /// </summary>
+        [JsonProperty]
         public Vector2Int Position { get; private set; }
 
         public bool IsDestroyed { get { return isDestroyed; } }
@@ -35,6 +42,7 @@ namespace ConsoleApp1
             this.UNIQUE_ID = uniqueID;
             this.components = new Dictionary<Type, Component>();
             this.newAddedComponents = new List<Component>();
+            System.Diagnostics.Debug.WriteLine("Shiat");
         }
 
         public void Destroy()
@@ -85,7 +93,7 @@ namespace ConsoleApp1
             return components.Values;
         }
 
-        public Component AddComponent<T>() where T : Component
+        public T AddComponent<T>() where T : Component
         {
             if (components.ContainsKey(typeof(T)))
             {
@@ -99,13 +107,13 @@ namespace ConsoleApp1
             return componentInstance;
         }
 
-        public Component GetComponent<T>() where T : Component
+        public T GetComponent<T>() where T : Component
         {
             Component outComponent;
 
             if (components.TryGetValue(typeof(T), out outComponent))
             {
-                return outComponent;
+                return (T)outComponent;
             }
             else
             {

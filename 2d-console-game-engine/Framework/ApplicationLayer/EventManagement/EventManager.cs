@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Reflection;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class EventManager
     {

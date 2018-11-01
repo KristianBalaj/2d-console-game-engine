@@ -23,3 +23,4 @@ Just open the project with your version of VS and all the dependencies should be
 - Shut down phase of the game engine
 - Documentation of the project
 - Implement TimeManager -> static, containing elapsed game time, delta time
+- Serialization

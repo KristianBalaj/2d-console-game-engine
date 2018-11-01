@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class MyGameLogic : GameLogicBase
     {
         public override void InitLogic()
         {
-            Actor newActor = new Actor(Vector2Int.zero, 0, "NewActor");
+            Actor newActor = new Actor(Vector2Int.Zero, 0, "NewActor");
             newActor.AddComponent<ConsoleRenderComponent>();
             newActor.AddComponent<MovementComponent>();
 

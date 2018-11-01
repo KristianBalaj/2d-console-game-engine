@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class ConsoleRenderComponent : Component, IRenderable
     {
-        public Vector2Int size;
+        private int sortOrder = 0;
+        private ScreenBuffer<char> currentRenderBuffer = new ScreenBuffer<char>(new Vector2Int(1, 1), '█');
 
-        public int GetSortOrder => 0;
+        public int GetSortOrder { get { return sortOrder; } }
 
         public ConsoleRenderComponent(Actor parentActor) : base(parentActor) { }
 
@@ -18,7 +19,6 @@ namespace ConsoleApp1
 
         public override void Start()
         {
-            this.size = new Vector2Int(5, 3);
         }
 
         public override void Update(float deltaTime)
@@ -27,7 +27,7 @@ namespace ConsoleApp1
 
         public object OnRender()
         {
-            ScreenBuffer<char> representation = new ScreenBuffer<char>(size, '█');
+            ScreenBuffer<char> representation = currentRenderBuffer;
             representation.ClearBuffer();
 
             return representation;
@@ -35,7 +35,13 @@ namespace ConsoleApp1
 
         public Bounds GetBounds()
         {
-            return new Bounds(ParentActor.Position, size);
+            return new Bounds(ParentActor.Position, currentRenderBuffer.GetSize);
+        }
+
+        public void ChangeRendering(Vector2Int size, int sortOrder, char character)
+        {
+            this.sortOrder = sortOrder;
+            this.currentRenderBuffer = new ScreenBuffer<char>(size, character);
         }
     }
 }

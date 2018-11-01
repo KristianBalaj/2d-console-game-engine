@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class MyGame : GameCodeBase
     {

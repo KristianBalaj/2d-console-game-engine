@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Serialization
+namespace GameEngine.Serialization
 {
     public class InputJsonParsingException : System.Exception
     {

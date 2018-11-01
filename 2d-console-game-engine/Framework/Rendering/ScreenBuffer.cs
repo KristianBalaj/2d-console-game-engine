@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class ScreenBuffer<T>
     {
@@ -13,6 +13,7 @@ namespace ConsoleApp1
 
         public int GetWidth { get { return internalBuffer.GetLength(0); } }
         public int GetHeight { get { return internalBuffer.GetLength(1); } }
+        public Vector2Int GetSize { get { return new Vector2Int(GetWidth, GetHeight); } }
 
         public T GetEmptyValue { get { return emptyValue; } }
 

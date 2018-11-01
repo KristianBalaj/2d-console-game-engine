@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class ActorManager
     {
+        public static int LastActorUniqueID = 0;
+
         private List<Actor> actors = new List<Actor>();
 
         public void AddActor(Actor newActor)

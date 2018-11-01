@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace GameEngine
 {
     public class ConsoleRenderer : Renderer
     {
@@ -16,7 +16,7 @@ namespace ConsoleApp1
             previousBuffer = new ScreenBuffer<char>(screenWidth, screenHeight, ' ');
             previousBuffer.ClearBuffer();
 
-            screenBounds = new Bounds(Vector2Int.zero, new Vector2Int(screenWidth, screenHeight));
+            screenBounds = new Bounds(Vector2Int.Zero, new Vector2Int(screenWidth, screenHeight));
         }
 
         /// <summary>
