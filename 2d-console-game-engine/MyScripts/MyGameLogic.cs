@@ -10,11 +10,9 @@ namespace GameEngine
     {
         public override void InitLogic()
         {
-            Actor newActor = new Actor(Vector2Int.Zero, 0, "NewActor");
-            newActor.AddComponent<ConsoleRenderComponent>();
-            newActor.AddComponent<MovementComponent>();
+            ActorsFactory factory = new ActorsFactory();
 
-            this.actorManager.AddActor(newActor);
+            this.actorManager.AddActor(factory.CreatePlayer());
         }
     }
 }
