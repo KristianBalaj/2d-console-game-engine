@@ -10,8 +10,7 @@ namespace GameEngine
     {
         public Actor CreatePlayer(Vector2Int position)
         {
-            ActorManager.LastActorUniqueID++;
-            Actor newAct = new Actor(position, ActorManager.LastActorUniqueID, "Player");
+            Actor newAct = new Actor(position, "Player");
             var renderComponent = newAct.AddComponent<ConsoleRenderComponent>();
             newAct.AddComponent<MovementComponent>();
 

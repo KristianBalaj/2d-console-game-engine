@@ -34,12 +34,16 @@ namespace GameEngine
 
         public bool IsDestroyed { get { return isDestroyed; } }
 
-        public Actor(Vector2Int position, int uniqueID, string actorName)
+        public Actor(Vector2Int position, string actorName)
         {
             this.Position = position;
             this.isDestroyed = false;
             this.Name = actorName;
-            this.UNIQUE_ID = uniqueID;
+
+            // TODO: implement generator of unique IDs
+            ActorManager.LastActorUniqueID++;
+            this.UNIQUE_ID = ActorManager.LastActorUniqueID;
+
             this.components = new Dictionary<Type, Component>();
             this.newAddedComponents = new List<Component>();
             System.Diagnostics.Debug.WriteLine("Shiat");
