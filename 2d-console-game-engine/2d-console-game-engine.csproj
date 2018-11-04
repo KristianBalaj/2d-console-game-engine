@@ -54,6 +54,7 @@
     <Compile Include="Framework\ApplicationLayer\EventManagement\Events\OnKeyPressedEvent.cs" />
     <Compile Include="Framework\ApplicationLayer\GameCodeBase.cs" />
     <Compile Include="Framework\DataStructures\Bounds.cs" />
+    <Compile Include="Framework\DataStructures\Vector2.cs" />
     <Compile Include="Framework\DataStructures\Vector2Int.cs" />
     <Compile Include="Framework\Exceptions\DuplicateComponentException.cs" />
     <Compile Include="Framework\Exceptions\WrongScreenBufferTypeException.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Framework\GameLogic\Actor\ActorManager.cs" />
     <Compile Include="Framework\GameLogic\Components\Component.cs" />
     <Compile Include="Framework\GameLogic\Components\ConsoleRenderComponent.cs" />
+    <Compile Include="Framework\GameLogic\Components\RectangleCollider.cs" />
     <Compile Include="Framework\GameLogic\GameLogicBase.cs" />
     <Compile Include="Framework\GameLogic\GameStates\GameStateBase.cs" />
     <Compile Include="Framework\GameLogic\GameStates\RunningGameState.cs" />

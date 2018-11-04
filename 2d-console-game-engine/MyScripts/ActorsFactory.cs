@@ -8,7 +8,7 @@ namespace GameEngine
 {
     public class ActorsFactory
     {
-        public Actor CreatePlayer(Vector2Int position)
+        public Actor CreatePlayer(Vector2 position)
         {
             Actor newAct = new Actor(position, "Player");
             var renderComponent = newAct.AddComponent<ConsoleRenderComponent>();

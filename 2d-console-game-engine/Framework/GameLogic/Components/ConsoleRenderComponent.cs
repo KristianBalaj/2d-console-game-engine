@@ -35,7 +35,7 @@ namespace GameEngine
 
         public Bounds GetBounds()
         {
-            return new Bounds(ParentActor.Position, currentRenderBuffer.GetSize);
+            return new Bounds(ParentActor.ClampedPosition, currentRenderBuffer.GetSize);
         }
 
         public void ChangeRendering(Vector2Int size, int sortOrder, char character)

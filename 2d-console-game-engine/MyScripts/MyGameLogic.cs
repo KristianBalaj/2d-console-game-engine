@@ -12,7 +12,7 @@ namespace GameEngine
         {
             ActorsFactory factory = new ActorsFactory();
 
-            this.actorManager.AddActor(factory.CreatePlayer(Vector2Int.Zero));
+            this.actorManager.AddActor(factory.CreatePlayer(Vector2.Zero));
         }
     }
 }

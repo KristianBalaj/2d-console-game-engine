@@ -30,11 +30,16 @@ namespace GameEngine
         /// World position of the actor.
         /// </summary>
         [JsonProperty]
-        public Vector2Int Position { get; private set; }
+        public Vector2 Position { get; set; }
+
+        /// <summary>
+        /// This is used for positioning the actor into console world.
+        /// </summary>
+        public Vector2Int ClampedPosition { get { return (Vector2Int)Position; } }
 
         public bool IsDestroyed { get { return isDestroyed; } }
 
-        public Actor(Vector2Int position, string actorName)
+        public Actor(Vector2 position, string actorName)
         {
             this.Position = position;
             this.isDestroyed = false;
