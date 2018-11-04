@@ -13,6 +13,7 @@ namespace GameEngine
             ActorsFactory factory = new ActorsFactory();
 
             this.actorManager.AddActor(factory.CreatePlayer(Vector2.Zero));
+            this.actorManager.AddActor(factory.CreateTest(new Vector2(5, 5)));
         }
     }
 }

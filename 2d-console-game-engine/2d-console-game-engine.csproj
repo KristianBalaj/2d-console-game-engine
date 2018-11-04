@@ -51,7 +51,9 @@
     <Compile Include="Framework\ApplicationLayer\EventManagement\EventBaseCS.cs" />
     <Compile Include="Framework\ApplicationLayer\EventManagement\EventContext.cs" />
     <Compile Include="Framework\ApplicationLayer\EventManagement\EventManager.cs" />
+    <Compile Include="Framework\ApplicationLayer\EventManagement\Events\OnCollisionListenerAddedEvent.cs" />
     <Compile Include="Framework\ApplicationLayer\EventManagement\Events\OnKeyPressedEvent.cs" />
+    <Compile Include="Framework\ApplicationLayer\EventManagement\Events\OnPhysicsBodyAddedEvent.cs" />
     <Compile Include="Framework\ApplicationLayer\GameCodeBase.cs" />
     <Compile Include="Framework\DataStructures\Bounds.cs" />
     <Compile Include="Framework\DataStructures\Vector2.cs" />
@@ -62,12 +64,15 @@
     <Compile Include="Framework\GameLogic\Actor\ActorManager.cs" />
     <Compile Include="Framework\GameLogic\Components\Component.cs" />
     <Compile Include="Framework\GameLogic\Components\ConsoleRenderComponent.cs" />
+    <Compile Include="Framework\GameLogic\Components\ICollidable.cs" />
+    <Compile Include="Framework\GameLogic\Components\ICollisionListener.cs" />
     <Compile Include="Framework\GameLogic\Components\RectangleCollider.cs" />
     <Compile Include="Framework\GameLogic\GameLogicBase.cs" />
     <Compile Include="Framework\GameLogic\GameStates\GameStateBase.cs" />
     <Compile Include="Framework\GameLogic\GameStates\RunningGameState.cs" />
     <Compile Include="Framework\InputManager.cs" />
     <Compile Include="Framework\MyMath.cs" />
+    <Compile Include="Framework\PhysicsManager.cs" />
     <Compile Include="Framework\Rendering\ConsoleRenderer.cs" />
     <Compile Include="Framework\Rendering\IRenderable.cs" />
     <Compile Include="Framework\Rendering\Renderer.cs" />
@@ -75,6 +80,7 @@
     <Compile Include="Framework\Serialization\Exceptions\InputJsonParsingException.cs" />
     <Compile Include="Framework\Serialization\InputModel.cs" />
     <Compile Include="MyScripts\ActorsFactory.cs" />
+    <Compile Include="MyScripts\ListenerTest.cs" />
     <Compile Include="MyScripts\MovementComponent.cs" />
     <Compile Include="MyScripts\MyGame.cs" />
     <Compile Include="MyScripts\MyGameLogic.cs" />

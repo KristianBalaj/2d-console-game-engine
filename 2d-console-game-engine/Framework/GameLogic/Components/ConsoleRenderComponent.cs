@@ -11,7 +11,7 @@ namespace GameEngine
         private int sortOrder = 0;
         private ScreenBuffer<char> currentRenderBuffer = new ScreenBuffer<char>(new Vector2Int(1, 1), '█');
 
-        public int GetSortOrder { get { return sortOrder; } }
+        int IRenderable.GetSortOrder { get { return sortOrder; } }
 
         public ConsoleRenderComponent(Actor parentActor) : base(parentActor) { }
 
@@ -25,7 +25,7 @@ namespace GameEngine
         {
         }
 
-        public object OnRender()
+        object IRenderable.OnRender()
         {
             ScreenBuffer<char> representation = currentRenderBuffer;
             representation.ClearBuffer();
@@ -33,7 +33,7 @@ namespace GameEngine
             return representation;
         }
 
-        public Bounds GetBounds()
+        Bounds IRenderable.GetBounds()
         {
             return new Bounds(ParentActor.ClampedPosition, currentRenderBuffer.GetSize);
         }

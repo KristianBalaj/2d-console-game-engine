@@ -61,10 +61,20 @@ namespace GameEngine
 
             foreach (var actor in actors)
             {
+                if (actor.IsDestroyed)
+                {
+                    continue;
+                }
+
                 var components = actor.GetAllComponents();
 
                 foreach (var component in components)
                 {
+                    if (!component.IsUpdatable)
+                    {
+                        continue;
+                    }
+
                     if (component is IRenderable)
                     {
                         result.Add(component as IRenderable);
@@ -74,5 +84,6 @@ namespace GameEngine
 
             return result;
         }
+
     }
 }

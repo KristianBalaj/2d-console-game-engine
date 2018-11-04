@@ -51,7 +51,6 @@ namespace GameEngine
 
             this.components = new Dictionary<Type, Component>();
             this.newAddedComponents = new List<Component>();
-            System.Diagnostics.Debug.WriteLine("Shiat");
         }
 
         public void Destroy()
@@ -112,6 +111,16 @@ namespace GameEngine
             T componentInstance = Activator.CreateInstance(typeof(T), this) as T;
             components.Add(typeof(T), componentInstance);
             newAddedComponents.Add(componentInstance);
+
+            if (componentInstance is ICollidable)
+            {
+                EventManager.TriggerEvent<Internal.OnPhysicsBodyAddedEvent>(new Internal.OnPhysicsBodyAddedEventContext(componentInstance as ICollidable));
+            }
+
+            if (componentInstance is ICollisionListener)
+            {
+                EventManager.TriggerEvent<Internal.OnCollisionListenerAddedEvent>(new Internal.OnCollisionListenerAddedEventContext(this, componentInstance as ICollisionListener));
+            }
 
             return componentInstance;
         }

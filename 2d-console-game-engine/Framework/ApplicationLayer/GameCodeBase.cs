@@ -12,6 +12,7 @@ namespace GameEngine
 
         private EventManager eventManager;
         private Renderer currentRenderer;
+        private PhysicsManager physicsManager;
         private GameLogicBase currentGameLogic;
         private InputManager inputManager;
 
@@ -30,6 +31,7 @@ namespace GameEngine
             this.eventManager = new EventManager();
             this.inputManager = new InputManager();
             this.currentRenderer = initializeRendering();
+            this.physicsManager = new PhysicsManager();
             this.currentGameLogic = createGame();
 
             this.inputManager.InitInputManager(gameStrings["Input"]);
@@ -45,6 +47,8 @@ namespace GameEngine
                 this.inputManager.ProcessInput();
 
                 this.currentGameLogic.UpdateLogic(MS_PER_FRAME / 1000.0f);
+
+                physicsManager.ProcessCollisions();
 
                 render();
 

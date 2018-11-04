@@ -13,6 +13,7 @@ namespace GameEngine
         /// If isEnabled false, then none of the abstract methods are called in game loop.
         /// </summary>
         public bool IsEnabled;
+        public bool IsUpdatable { get { return IsEnabled && !ParentActor.IsDestroyed; } }
 
         public Actor ParentActor { get; private set; }
 

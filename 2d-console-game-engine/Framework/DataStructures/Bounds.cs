@@ -11,9 +11,9 @@ namespace GameEngine
         public Vector2Int TopLeft;
         public Vector2Int Size;
 
-        public Bounds(Vector2Int center, Vector2Int size)
+        public Bounds(Vector2Int topLeftCorner, Vector2Int size)
         {
-            this.TopLeft = center;
+            this.TopLeft = topLeftCorner;
             this.Size = size;
         }
 
