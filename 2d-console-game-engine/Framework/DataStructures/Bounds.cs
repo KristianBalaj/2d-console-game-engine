@@ -19,12 +19,12 @@ namespace GameEngine
 
         public bool Intersects(Bounds bounds)
         {
-            if (TopLeft.x > bounds.TopLeft.x + bounds.Size.x || bounds.TopLeft.x > TopLeft.x + Size.x)
+            if (TopLeft.x >= bounds.TopLeft.x + bounds.Size.x || bounds.TopLeft.x >= TopLeft.x + Size.x)
             {
                 return false;
             }
 
-            if (TopLeft.y > bounds.TopLeft.y + bounds.Size.y || bounds.TopLeft.y > TopLeft.y + Size.y)
+            if (TopLeft.y >= bounds.TopLeft.y + bounds.Size.y || bounds.TopLeft.y >= TopLeft.y + Size.y)
             {
                 return false;
             }

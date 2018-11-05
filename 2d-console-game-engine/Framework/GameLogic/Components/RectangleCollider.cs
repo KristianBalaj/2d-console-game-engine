@@ -41,8 +41,8 @@ namespace GameEngine
         {
             // TODO: difference between triggers and colliders
             Vector2Int collisionBoundsSize = new Vector2Int();
-            collisionBoundsSize.x = (Math.Abs(previousPos.x - ParentActor.ClampedPosition.x) + 1) * boundsSize.x;
-            collisionBoundsSize.y = (Math.Abs(previousPos.y - ParentActor.ClampedPosition.y) + 1) * boundsSize.y;
+            collisionBoundsSize.x = boundsSize.x + Math.Abs(previousPos.x - ParentActor.ClampedPosition.x);
+            collisionBoundsSize.y = boundsSize.y + Math.Abs(previousPos.y - ParentActor.ClampedPosition.y);
 
             Vector2Int boundsTopLeft = new Vector2Int();
             boundsTopLeft.x = Math.Min(ParentActor.ClampedPosition.x, previousPos.x);
