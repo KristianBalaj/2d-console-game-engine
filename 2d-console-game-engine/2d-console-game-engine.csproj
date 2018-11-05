@@ -79,6 +79,7 @@
     <Compile Include="Framework\Rendering\ScreenBuffer.cs" />
     <Compile Include="Framework\Serialization\Exceptions\InputJsonParsingException.cs" />
     <Compile Include="Framework\Serialization\InputModel.cs" />
+    <Compile Include="Framework\Time.cs" />
     <Compile Include="MyScripts\ActorsFactory.cs" />
     <Compile Include="MyScripts\ListenerTest.cs" />
     <Compile Include="MyScripts\MovementComponent.cs" />

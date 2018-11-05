@@ -17,7 +17,7 @@ namespace GameEngine
         {
         }
 
-        public override void UpdateState(float deltaTime)
+        public override void UpdateState()
         {
             Debug.WriteLine("Updating game state");
         }

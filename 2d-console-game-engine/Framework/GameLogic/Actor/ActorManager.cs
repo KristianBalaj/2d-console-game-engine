@@ -40,13 +40,13 @@ namespace GameEngine
         /// Updates all the enabled components on all the non destroyed actors.
         /// </summary>
         /// <param name="deltaTime"></param>
-        public void UpdateActors(float deltaTime)
+        public void UpdateActors()
         {
             foreach (var actor in actors)
             {
                 if (!actor.IsDestroyed)
                 {
-                    actor.UpdateComponents(deltaTime);
+                    actor.UpdateComponents();
                 }
             }
         }

@@ -15,6 +15,8 @@ namespace GameEngine
 
         private Vector2Int boundsSize;
 
+        public bool IsTrigger { get; set; }
+
         public RectangleCollider(Actor parentActor) : base(parentActor)
         {
         }
@@ -28,13 +30,14 @@ namespace GameEngine
             this.previousPos = ParentActor.ClampedPosition;
         }
 
-        public override void Update(float deltaTime)
+        public override void Update()
         {
         }
 
-        public void SetupCollisionBounds(Vector2Int size)
+        public void SetupCollisionBounds(Vector2Int size, bool isTrigger)
         {
             this.boundsSize = size;
+            this.IsTrigger = isTrigger;
         }
 
         Bounds ICollidable.GetCollisionBounds()

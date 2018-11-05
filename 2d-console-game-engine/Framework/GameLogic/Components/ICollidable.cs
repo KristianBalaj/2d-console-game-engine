@@ -10,5 +10,9 @@ namespace GameEngine
     {
         Bounds GetCollisionBounds();
         void AllignColliders();
+        /// <summary>
+        /// When istrigger is true, then the collider is used like an area detector. Otherwise it is used like normal solid collider.
+        /// </summary>
+        bool IsTrigger { get; set; }
     }
 }

@@ -14,6 +14,10 @@ namespace GameEngine
 
             this.actorManager.AddActor(factory.CreatePlayer(Vector2.Zero));
             this.actorManager.AddActor(factory.CreateTest(new Vector2(5, 5)));
+            this.actorManager.AddActor(factory.CreateTest(new Vector2(8, 8)));
+            this.actorManager.AddActor(factory.CreateTest(new Vector2(2, 8)));
+            this.actorManager.AddActor(factory.CreateTest(new Vector2(2, 11)));
+
         }
     }
 }

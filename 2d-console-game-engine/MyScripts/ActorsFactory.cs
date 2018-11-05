@@ -16,7 +16,7 @@ namespace GameEngine
             newAct.AddComponent<ListenerTest>();
             var coll = newAct.AddComponent<RectangleCollider>();
 
-            coll.SetupCollisionBounds(new Vector2Int(2, 2));
+            coll.SetupCollisionBounds(new Vector2Int(2, 2), false);
             renderComponent.ChangeRendering(new Vector2Int(2, 2), 0, '*');
 
             return newAct;
@@ -30,7 +30,7 @@ namespace GameEngine
             newAct.AddComponent<ListenerTest>();
             var coll = newAct.AddComponent<RectangleCollider>();
 
-            coll.SetupCollisionBounds(new Vector2Int(2, 2));
+            coll.SetupCollisionBounds(new Vector2Int(2, 2), false);
             renderComponent.ChangeRendering(new Vector2Int(2, 2), 0, 't');
 
             return newAct;

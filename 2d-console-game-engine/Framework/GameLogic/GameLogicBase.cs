@@ -28,15 +28,15 @@ namespace GameEngine
             currentGameState = newState;
         }
 
-        public void UpdateLogic(float deltaTime)
+        public void UpdateLogic()
         {
             if (currentGameState != null)
             {
-                currentGameState.UpdateState(deltaTime);
+                currentGameState.UpdateState();
             }
 
             actorManager.StartActors();
-            actorManager.UpdateActors(deltaTime);
+            actorManager.UpdateActors();
         }
 
         public IEnumerable<IRenderable> GetRenderables()

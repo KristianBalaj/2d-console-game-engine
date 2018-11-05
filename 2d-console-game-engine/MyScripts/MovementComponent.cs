@@ -46,6 +46,6 @@ namespace GameEngine
             }
         }
 
-        public override void Update(float deltaTime) { }
+        public override void Update() { }
     }
 }

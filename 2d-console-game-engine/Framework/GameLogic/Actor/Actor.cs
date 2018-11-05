@@ -83,7 +83,7 @@ namespace GameEngine
         /// Updates all the enabled components on this actor.
         /// </summary>
         /// <param name="deltaTime"></param>
-        public void UpdateComponents(float deltaTime)
+        public void UpdateComponents()
         {
             var components = GetAllComponents();
 
@@ -91,7 +91,7 @@ namespace GameEngine
             {
                 if (component.IsEnabled)
                 {
-                    component.Update(deltaTime);
+                    component.Update();
                 }
             }
         }

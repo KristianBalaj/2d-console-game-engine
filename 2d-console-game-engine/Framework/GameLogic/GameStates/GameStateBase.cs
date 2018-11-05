@@ -9,7 +9,7 @@ namespace GameEngine
     public abstract class GameStateBase
     {
         public abstract void InitializeState();
-        public abstract void UpdateState(float deltaTime);
+        public abstract void UpdateState();
         public abstract void FinishState();
     }
 }

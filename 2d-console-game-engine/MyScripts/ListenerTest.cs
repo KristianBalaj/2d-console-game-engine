@@ -14,7 +14,16 @@ namespace GameEngine
 
         public void OnCollision(ICollidable otherCol)
         {
-            System.Diagnostics.Debug.WriteLine("Collision on actor {0} uid {1}", ParentActor.Name, ParentActor.UNIQUE_ID);
+        }
+
+        public void OnCollisionEnter(ICollidable otherCol)
+        {
+            System.Diagnostics.Debug.WriteLine("Entering collision on {0}", ParentActor.Name);
+        }
+
+        public void OnCollisionExit(ICollidable otherCol)
+        {
+            System.Diagnostics.Debug.WriteLine("Exiting collision on {0}", ParentActor.Name);
         }
 
         public override void OnDestroy()
@@ -25,7 +34,7 @@ namespace GameEngine
         {
         }
 
-        public override void Update(float deltaTime)
+        public override void Update()
         {
         }
     }

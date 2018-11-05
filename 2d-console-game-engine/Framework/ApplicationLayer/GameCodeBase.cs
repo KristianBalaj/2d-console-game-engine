@@ -44,9 +44,11 @@ namespace GameEngine
             {
                 long start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
+                Time.UpdateTime(MS_PER_FRAME / 1000.0f);
+
                 this.inputManager.ProcessInput();
 
-                this.currentGameLogic.UpdateLogic(MS_PER_FRAME / 1000.0f);
+                this.currentGameLogic.UpdateLogic();
 
                 physicsManager.ProcessCollisions();
 
